@@ -1,0 +1,7 @@
+{
+  "name": "Proyecto PSC",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

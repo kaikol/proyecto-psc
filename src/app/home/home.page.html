@@ -1,0 +1,33 @@
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/ionic/css/ionic.bundle.css" />
+<script src="../../assets/ionic/dist/ionic.js"></script>
+
+<ion-app>
+
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>Lista</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content inset="true">
+      <ion-item>
+    <ion-button (click)="getUsersList()">Recargar</ion-button>
+        </ion-item>
+    <ion-list>
+
+      <ion-item *ngFor="let x of usersList;let i=index">
+        <ion-avatar slot="start" class="avata">
+          <img [src]="x.picture.large">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{x.name.title}}. {{x.name.first}}</h2>
+          <h3>{{x.email}}</h3>
+          <p>{{x.location.city}} {{x.location.state}} {{x.location.street}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+</ion-app>
